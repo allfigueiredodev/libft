@@ -1,6 +1,6 @@
 CC = gcc
 FLAGS = -Wall -Werror -Wextra && ./a.out
-SRC = ft_memmove.c
+SRC = ft_memcmp.c
 
 all:
 	$(CC) $(SRC) $(FLAGS)
