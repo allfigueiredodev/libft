@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 12:56:17 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/03 13:44:07 by aperis-p         ###   ########.fr       */
+/*   Created: 2023/05/03 14:03:32 by aperis-p          #+#    #+#             */
+/*   Updated: 2023/05/03 15:11:52 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	char *ptr;
+	unsigned char * ptr;
 
-	ptr = (char *)s;
-	while(n !=0)
+	ptr = NULL;
+	while(--n)
 	{
-		*ptr = '\0';
-		ptr++;
-		n--;
+		if((*(unsigned char *)s) == (unsigned char)c)
+		{
+			ptr = &(*(unsigned char *)s);
+			return (ptr);
+		}
+		s++;
 	}	
+	return(ptr);
 }
 
-
-
 // int main(void)
-// {	
+// {
 // 	char str[] = "qwertyuiop";
-// 	ft_bzero(str, 4);
-// 	printf("%s\n", str);
+// 	printf("%s", (char *)ft_memchr(str, 'X', 8));
 // }
