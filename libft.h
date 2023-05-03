@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:42:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/03 14:14:05 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/03 15:32:50 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@
 	int ft_tolower(int c);
 	int ft_toupper(int c);	
 	void *ft_memchr(const void *s, int c, size_t n);
+	void *ft_memcpy(void *dest, const void *src, size_t n);
 	
 #endif
