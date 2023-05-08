@@ -1,6 +1,6 @@
 CC = gcc
 FLAGS = -Wall -Werror -Wextra && ./a.out
-SRC = ft_atoi.c
+SRC = ft_strdup.c ft_strlen.c
 
 all:
 	$(CC) $(SRC) $(FLAGS)

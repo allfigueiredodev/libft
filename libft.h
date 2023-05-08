@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:42:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/05 20:42:35 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/08 17:31:18 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@
 	int ft_memcmp(const void *s1, const void *s2, size_t n);
 	size_t ft_strlcpy(char *dst, const char *src, size_t size);
 	size_t ft_strlcat(char *dst, const char *src, size_t size);
-	char *ft_strnstr(const char	*big, const char *little, size_t len);	
+	char *ft_strnstr(const char	*big, const char *little, size_t len);
+	int ft_atoi(const char *nptr);
+	char *ft_strdup(const char *s);	
 		
 #endif
