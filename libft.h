@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:42:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/08 17:31:18 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/08 19:44:20 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define LIBFT_H
 
 	#include <stdio.h>
+	#include <stdint.h>
+	#include <stdlib.h>
 
 	void ft_bzero(void *s, size_t n);
 	int ft_isalnum(int c);
@@ -36,6 +38,7 @@
 	size_t ft_strlcat(char *dst, const char *src, size_t size);
 	char *ft_strnstr(const char	*big, const char *little, size_t len);
 	int ft_atoi(const char *nptr);
-	char *ft_strdup(const char *s);	
+	char *ft_strdup(const char *s);
+	void *ft_calloc(size_t nmemb, size_t size);	
 		
 #endif
