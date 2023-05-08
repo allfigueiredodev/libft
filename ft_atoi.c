@@ -6,12 +6,23 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 16:56:13 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/06 22:17:27 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:43:44 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <limits.h>
+#include <string.h>
+#include <stdlib.h>
+
+int is_valid(char c)
+{
+	if((c > 32 && c < 43) || (c > 43 && c < 45)
+    || (c > 45 && c < 48) || (c > 57))
+		return (1);
+	return (0);
+}
 
 int ft_atoi(const char *nptr)
 {
@@ -20,11 +31,8 @@ int ft_atoi(const char *nptr)
     
     result = 0;
     sign = 1;
-    if((*nptr > 32 && *nptr < 43) || (*nptr > 43 && *nptr < 45)
-    || (*nptr > 45 && *nptr < 48) || (*nptr > 57))
-        return (0);
-while(*nptr != '\0')
-{    
+    if(is_valid(*nptr))
+		return(0);
 	while((*nptr >= 1 && *nptr <= 32) ||(*nptr == '-' || *nptr == '+'))
 	{
 		if(*nptr == '-')
@@ -36,9 +44,7 @@ while(*nptr != '\0')
 		result = (result * 10) + (*nptr - 48); 
 		nptr++;    
 	}
-		return(result * sign);    
-}
-    return(result * sign);
+	return(result * sign);    
 }
 
 // int main(void)
