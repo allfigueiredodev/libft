@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:42:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/08 20:24:24 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/08 21:12:16 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@
 	int ft_atoi(const char *nptr);
 	char *ft_strdup(const char *s);
 	void *ft_calloc(size_t nmemb, size_t size);
-	char *ft_substr(char const *s, unsigned int start, size_t len);	
+	char *ft_substr(char const *s, unsigned int start, size_t len);
+	char *ft_strjoin(char const *s1, char const *s2);	
 		
 #endif
