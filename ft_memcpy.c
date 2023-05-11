@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:16:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/03 15:45:33 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/10 20:32:04 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 // {
 // 	char src[100] = "I'm a src text, and you know it!";
 // 	char dest[100]= "Try replace me";
-// 	printf("%s", (char *)ft_memcpy(dest, src, 35));
+// 	printf("%s", (char *)ft_memcpy(dest, src, 5));
 // }

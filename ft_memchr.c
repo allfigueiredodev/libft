@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:03:32 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/03 15:11:52 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/10 20:32:35 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ void *ft_memchr(const void *s, int c, size_t n)
 // int main(void)
 // {
 // 	char str[] = "qwertyuiop";
-// 	printf("%s", (char *)ft_memchr(str, 'X', 8));
+// 	printf("%s", (char *)ft_memchr(str, 'y', 8));
 // }
