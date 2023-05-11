@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:42:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/11 14:45:45 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/11 17:45:11 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@
 	char **ft_split(char const *s, char c);	
 	char *ft_itoa(int n);
 	char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+	void ft_striteri(char *s, void (*f)(unsigned int, char*));
 		
 #endif
