@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 13:58:17 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/03 12:30:26 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/11 15:51:06 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char *ft_strrchr(char *s, int c)
 
 // int main(void)
 // {
-//     printf("%s\n", ft_strrchr("qwertyyyyyytu", 'u'));
+//     printf("%s\n", ft_strrchr("qwertyyyyyytu", 'y'));
 //     printf("%s\n", ft_strrchr("qwertyyyyyytu", '\0'));
 //     printf("%s\n", ft_strrchr("qwertyyyyyytu", 'x'));
 // }
