@@ -6,11 +6,12 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:58:48 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/10 22:22:41 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/11 14:39:42 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
 int n_counter(int n)
 {
@@ -31,20 +32,53 @@ int n_counter(int n)
 	return (counter + 1);	
 }
 
+char *ft_hard_return(int n)
+{
+	char *str;
+	int i;
+
+	str = NULL;
+	i = 0;
+	if(n == 0)
+	{
+		str = (char *)malloc(2 * sizeof(char));
+		if(!str)
+			return (NULL);		
+		*(str + 0) = '0';
+		*(str + 1) = '\0';
+	}
+	else if(n == INT_MIN)
+	{
+		str = (char*)malloc(12 * sizeof(char));
+		if(!str)
+			return (NULL);
+		ft_strlcpy(str, "-2147483648", 12); 
+	}		
+	return (str);
+}
+
+int ft_is_negative(int n)
+{
+	int sign;
+	sign = -1;
+	if(n < 0)
+		return(n * sign);
+	else
+		return(n);	
+}
+
 char *ft_itoa(int n)
 {
 	char *result;
 	int temp;
 	int len;
-	int sign;
 	
 	len = n_counter(n);
-	sign = -1;
-	if(n < 0)
-		temp = n * sign;
-	else
-		temp = n;
-	if(!(result = (char*) malloc(n_counter(n) * sizeof(char))))
+	if(n == 0 || n == INT_MIN)
+		return(ft_hard_return(n));
+	temp = ft_is_negative(n);
+	result = (char*) malloc(n_counter(n) * sizeof(char));
+	if(!result)
 		return (NULL);
 	if(n < 0)
 		result[0] = '-';
@@ -59,6 +93,6 @@ char *ft_itoa(int n)
 
 // int main(void)
 // {
-// 	printf("%s\n", ft_itoa(42467));
+// 	printf("%s\n", ft_itoa(-2147483647));
 // 	return(0);
 // }
