@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:42:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/11 18:37:45 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/12 13:21:22 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 	#include <stdio.h>
 	#include <stdint.h>
 	#include <stdlib.h>
+	#include <unistd.h>
 
 	void ft_bzero(void *s, size_t n);
 	int ft_isalnum(int c);
@@ -49,5 +50,6 @@
 	void ft_striteri(char *s, void (*f)(unsigned int, char*));
 	void ft_putchar_fd(char c, int fd);
 	void ft_putendl_fd(char *s, int fd);
+	void ft_putnbr_fd(int n, int fd);
 		
 #endif
