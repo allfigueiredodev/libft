@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 19:32:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/15 20:42:13 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/15 20:51:55 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,7 @@ char **ft_split(char const *s, char c)
 		result[j] = (char *) malloc(ft_count_btw(&temp[i], c) * sizeof(char) + 1);
 		if(result[j] == NULL)
 			return (NULL);
-		while(temp[i] == c)
-			i++;
+		while(temp[i++] == c)
 		ft_strlcpy(result[j], &temp[i], ft_count_btw(&temp[i], c) + 1);
 		j++;
 		i += ft_count_btw(&temp[i], c);
