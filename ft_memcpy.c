@@ -6,18 +6,18 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:16:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/10 20:32:04 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:52:17 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char * dest_ptr;
+	unsigned char	*dest_ptr;
+
 	dest_ptr = dest;
-	
-	while(n--)
+	while (n--)
 	{
 		(*(unsigned char *)dest) = (*(unsigned char *)src);
 		dest++;

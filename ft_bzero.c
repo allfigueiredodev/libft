@@ -6,26 +6,24 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:56:17 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/03 13:44:07 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:24:05 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char *ptr;
+	char	*ptr;
 
 	ptr = (char *)s;
-	while(n !=0)
+	while (n != 0)
 	{
 		*ptr = '\0';
 		ptr++;
 		n--;
 	}	
 }
-
-
 
 // int main(void)
 // {	

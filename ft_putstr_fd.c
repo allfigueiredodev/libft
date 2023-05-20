@@ -6,19 +6,18 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 18:24:14 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/11 18:32:21 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:59:18 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	while(*s)
+	while (*s)
 	{
 		write(fd, s, 1);
-		s++;		
+		s++;
 	}
 }
 

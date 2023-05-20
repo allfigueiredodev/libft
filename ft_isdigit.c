@@ -6,15 +6,15 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 17:10:32 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/01 17:56:06 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:24:45 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if(c >= '0' && c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

@@ -6,43 +6,35 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 18:59:26 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/01 20:43:34 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/17 22:29:16 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char *ft_strchr(char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char *ptr;
-	int i;
-	
+	int			i;
+
+	if (!ft_isascii(c))
+		return ((char *)s);
 	i = 0;
-	if(c == '\0')
+	if (c == '\0')
 	{
 		while (*s != '\0')
 		{
 			i++;
 			s++;
 		}
-		ptr = s;
-		return (ptr);		
+		return ((char *)s);
 	}
-	
-	while(*s != '\0')
+	while (*s != '\0')
 	{			
-		if(*s == c)
+		if (*s == c)
 		{
-			ptr = s;
-			return (ptr);
+			return ((char *)s);
 		}
-		s++;	
+		s++;
 	}
-	return(NULL);
+	return (NULL);
 }
-
-// int main (void)
-// {
-// 	int letter = '\0';
-// 	printf("%s", ft_strchr("qertyu", letter));
-// }

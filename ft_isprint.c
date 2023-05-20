@@ -6,17 +6,17 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 18:03:40 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/01 18:10:47 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:25:17 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c > 31 && c != 127)
 		return (1);
-	return(0);
+	return (0);
 }
 
 // int main (void)

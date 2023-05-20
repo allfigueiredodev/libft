@@ -6,15 +6,15 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 17:39:25 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/01 18:01:58 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:25:34 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
@@ -27,5 +27,4 @@ int ft_isascii(int c)
 // 	printf("%d\n", ft_isascii('y'));	
 // 	printf("%d\n", ft_isascii(7));	
 // 	printf("%d\n", ft_isascii('@'));	
-	
 // }

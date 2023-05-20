@@ -6,12 +6,11 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:16:09 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/08 17:30:10 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:17:45 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {
@@ -33,7 +32,7 @@ char	*ft_strdup(const char *s)
 	return (dupped);
 }
 
-int	main(void)
-{
-	printf("%s", ft_strdup("dup testiuhasdhuisfda"));
-}
+// int	main(void)
+// {
+// 	printf("%s", ft_strdup("dup testiuhasdhuisfda"));
+// }

@@ -6,16 +6,15 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 18:36:52 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/11 18:42:08 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:57:18 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
-	while(*s)
+	while (*s)
 	{
 		write(fd, s, 1);
 		s++;

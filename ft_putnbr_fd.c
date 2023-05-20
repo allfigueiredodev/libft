@@ -6,27 +6,26 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 18:44:54 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/12 15:44:16 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 12:58:30 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int temp;
-	int  be_positive;
-	
+	int	temp;
+	int	be_positive;
+
 	temp = n;
-	be_positive = -1;	
-	if(temp < 0)
+	be_positive = -1;
+	if (temp < 0)
 	{
 		ft_putchar_fd('-', 1);
-		if(n == INT_MIN)
+		if (n == INT_MIN)
 		{
 			ft_putchar_fd('2', 1);
-			temp = 147483648; 
+			temp = 147483648;
 		}
 		else
 			temp = temp * be_positive;
@@ -35,7 +34,7 @@ void ft_putnbr_fd(int n, int fd)
 	{
 		ft_putnbr_fd((temp / 10), fd);
 	}
-	ft_putchar_fd(((temp % 10)+ '0'), fd);
+	ft_putchar_fd(((temp % 10) + '0'), fd);
 }
 
 // int main (void)

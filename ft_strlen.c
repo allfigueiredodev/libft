@@ -6,23 +6,23 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 18:20:34 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/03 20:26:49 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:39:27 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	int counter;
-	
+	int	counter;
+
 	counter = 0;
-	while(*s)
+	while (*s)
 	{
 		counter++;
 		s++;
 	}
-	return(counter);
+	return (counter);
 }
 
 // int main (void)
