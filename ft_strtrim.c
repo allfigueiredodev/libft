@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 21:49:37 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 14:20:43 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/23 16:52:45 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = (char *)&s1[len - 1];
 	while (ft_is_present(&s1[i++], set))
 		begin++;
-	while (ft_is_present(&s1[(len--) - 1], set))
+	if (*begin == '\0')
+		return (ft_strdup("\0"));
+	while (ft_is_present(&s1[len - 1], set))
+	{
 		end--;
-	len = ft_strlen(begin) - ft_strlen(end);
-	trimmed = ((char *)malloc(len * sizeof(char)));
+		len--;
+	}
+	len = ft_strlen(begin) - ft_strlen(end) + 1;
+	trimmed = ((char *)malloc((len + 1) * sizeof(char)));
 	if (!trimmed)
 		return (NULL);
 	ft_strlcpy(trimmed, begin, len + 1);
 	return (trimmed);
 }
-
-// int main(void)
-// {
-// 	printf("%s\n", ft_strtrim("axdddadddddax", "ax"));
-// 	return(0);
-// }

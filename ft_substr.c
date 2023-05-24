@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 20:23:52 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 14:22:58 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/22 20:19:27 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,26 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
-	int		i;
-	int		j;
+	char				*sub;
+	unsigned int		i;
+	size_t				j;
 
 	i = start;
 	j = 0;
-	sub = (char *) malloc(len * sizeof(char));
+	if (len > (ft_strlen(s) - start))
+		len = ft_strlen(s) - start;
+	if (start > ft_strlen(s))
+		len = 0;
+	sub = (char *) malloc(((len + 1) * sizeof(char)));
 	if (!sub)
 		return (NULL);
-	while (len && *s != '\0')
+	while (i < ft_strlen(s) && j < len)
 	{
 		sub[j] = s[i];
 		j++;
 		i++;
-		len--;
 	}
+	sub[j] = '\0';
 	return (sub);
 }
 
-// int main(void)
-// {
-// 	char qwerty[] = "qwertyuiop";
-// 	char *tester;
-
-// 	if(!(tester = (char*)malloc( 4 * sizeof(char))))
-// 		return (1);
-// 	tester = ft_substr(qwerty, 3, 4);
-// 	printf("%s", tester);
-
-// 	return(0);
-// }

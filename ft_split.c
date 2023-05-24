@@ -6,22 +6,29 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 19:32:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/17 15:27:30 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/24 16:08:02 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_del_count(const char *s, char c)
+size_t	ft_del_count(char const *s, char c)
 {
-	size_t	counter;
+	size_t		counter;
+	char const	*ptr;
+	int			i;
 
+	ptr = s;
 	counter = 0;
-	while (*s)
+	i = 0;
+	while (*(ptr + i))
 	{
-		if (*s == c)
-		counter++;
-		s++;
+		while (*(ptr + i) == c && *(ptr + i) != '\0')
+			i++;
+		while (*(ptr + i) != c && *(ptr + i) != '\0')
+			i++;
+		if (*(ptr + i) != '\0' || *(ptr + i - 1) != c)
+			counter++;
 	}
 	return (counter);
 }
@@ -61,25 +68,29 @@ char	**ft_split(char const *s, char c)
 	temp = s;
 	i = 0;
 	j = 0;
-	result = (char **) malloc((ft_del_count(s, c) + 2) * sizeof(char *));
+	result = (char **) malloc((ft_del_count(s, c) + 1) * sizeof(char *));
 	if (result == NULL)
 		return (NULL);
 	while (temp[i])
 	{
-		result[j] = (char *)malloc(ft_btw(&temp[i], c) * sizeof(char) + 1);
-		if (result[j] == NULL)
-			return (NULL);
-		while (temp[i++] == c)
-			ft_strlcpy(result[j], &temp[i], ft_btw(&temp[i], c) + 1);
-		j++;
-		i += ft_btw(&temp[i], c);
+		if (temp[i] != c)
+		{
+			result[j] = malloc((ft_btw(&temp[i], c) + 1) * sizeof(char));
+			if (result[j] == NULL)
+				return (NULL);
+			ft_strlcpy(result[j++], &temp[i], ft_btw(&temp[i], c) + 1);
+			i += ft_btw(&temp[i], c);
+		}
+		else
+			i++;
 	}
+	result[j] = NULL;
 	return (result);
 }
 
 // int main(void)
 // {
-// 	char **string = ft_split("xcccxxdddxxxxjjjxlll", 'x');
+// 	char **string = ft_split("xssssxggxxggxxuuuuuu", 'x');
 // 	int i = 0;
 // 	while(i < 5)
 // 	{

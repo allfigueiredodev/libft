@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 16:56:13 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 12:18:41 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:26:31 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ int	ft_atoi(const char *nptr)
 	sign = 1;
 	if (is_valid(*nptr))
 		return (0);
-	while ((*nptr >= 1 && *nptr <= 32) || (*nptr == '-' || *nptr == '+'))
+	while ((*nptr >= 1 && *nptr <= 32))
+		nptr++;
+	if (*nptr == '-' || *nptr == '+')
 	{
 		if (*nptr == '-')
 			sign = -1;
@@ -42,19 +44,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * sign);
 }
-
-// int main(void)
-// {
-// 	printf("test 0: %d\n", ft_atoi("654")); // = 654
-// 	printf("test 1: %d\n", ft_atoi("sgd")); // = 0
-// 	printf("test 2: %d\n", ft_atoi("s654g654d")); // = 0
-// 	printf("test 3: %d\n", ft_atoi("654g654d")); // = 654
-// 	printf("test 4: %d\n", ft_atoi("9    654")); // = 9
-// 	printf("test 5: %d\n", ft_atoi("    654")); // = 654
-// 	printf("test 6: %d\n", ft_atoi("6.54")); // = 6
-// 	printf("test 7: %d\n", ft_atoi(".654")); // = 0
-// 	printf("test 8: %d\n", ft_atoi("-.654")); // = 0
-// 	printf("test 9: %d\n", ft_atoi("-654")); // = -654
-// 	printf("test 10: %d\n", ft_atoi("	654")); // = 654
-// 	return(0);
-// }
