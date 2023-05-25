@@ -6,19 +6,11 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 14:45:17 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 13:42:55 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/24 19:59:53 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	ft_mapi_func(unsigned int n, char c)
-{
-	char	str;
-
-	str = c + n;
-	return (str);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -31,17 +23,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	if (!s || !f)
 		return (NULL);
-	*(str + i) = '\0';
 	while (*(s + i))
 	{
-		*(str + i) = f(1, *s);
+		*(str + i) = f(i, *(s + i));
 		i++;
 	}
 	*(str + i) = '\0';
 	return (str);
 }
-
-// int main(void)
-// {
-// 	printf("%s", ft_strmapi("q5w6e9r7t8y9u2i1o0p", *ft_mapi_func));	
-// }

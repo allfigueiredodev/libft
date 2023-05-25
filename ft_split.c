@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 19:32:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/24 16:08:02 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/24 20:00:37 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,41 +60,25 @@ int	ft_btw(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char		**result;
-	char const	*temp;
-	int			i;
-	int			j;
+	char		**temp;
 
-	result = NULL;
-	temp = s;
-	i = 0;
-	j = 0;
 	result = (char **) malloc((ft_del_count(s, c) + 1) * sizeof(char *));
 	if (result == NULL)
 		return (NULL);
-	while (temp[i])
+	temp = result;
+	while (*s)
 	{
-		if (temp[i] != c)
+		if (*s != c)
 		{
-			result[j] = malloc((ft_btw(&temp[i], c) + 1) * sizeof(char));
-			if (result[j] == NULL)
+			*temp = malloc((ft_btw(s, c) + 1) * sizeof(char));
+			if (*temp == NULL)
 				return (NULL);
-			ft_strlcpy(result[j++], &temp[i], ft_btw(&temp[i], c) + 1);
-			i += ft_btw(&temp[i], c);
+			ft_strlcpy(*temp++, s, ft_btw(s, c) + 1);
+			s += ft_btw(s, c);
 		}
 		else
-			i++;
+			s++;
 	}
-	result[j] = NULL;
+	*temp = NULL;
 	return (result);
 }
-
-// int main(void)
-// {
-// 	char **string = ft_split("xssssxggxxggxxuuuuuu", 'x');
-// 	int i = 0;
-// 	while(i < 5)
-// 	{
-// 		printf("%s\n", string[i]);
-// 		i++;
-// 	}	
-// }

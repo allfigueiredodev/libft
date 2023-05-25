@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 18:44:54 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 12:58:30 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/24 21:37:19 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,23 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int	temp;
-	int	be_positive;
+	unsigned int	nmbr;
 
-	temp = n;
-	be_positive = -1;
-	if (temp < 0)
+	if (n < 0)
 	{
-		ft_putchar_fd('-', 1);
-		if (n == INT_MIN)
-		{
-			ft_putchar_fd('2', 1);
-			temp = 147483648;
-		}
-		else
-			temp = temp * be_positive;
+		ft_putchar_fd('-', fd);
+		nmbr = n * -1;
 	}
-	if (temp >= 10)
+	else
+		nmbr = n;
+	if (nmbr >= 10)
 	{
-		ft_putnbr_fd((temp / 10), fd);
+		ft_putnbr_fd((nmbr / 10), fd);
 	}
-	ft_putchar_fd(((temp % 10) + '0'), fd);
+	ft_putchar_fd(((nmbr % 10) + '0'), fd);
 }
 
 // int main (void)
 // {
-// 	ft_putnbr_fd(INT_MIN, 1);
+// 	ft_putnbr_fd(-42, 1);
 // }
