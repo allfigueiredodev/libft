@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:16:09 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 13:17:45 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:52:11 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,3 @@ char	*ft_strdup(const char *s)
 	dupped[i] = '\0';
 	return (dupped);
 }
-
-// int	main(void)
-// {
-// 	printf("%s", ft_strdup("dup testiuhasdhuisfda"));
-// }

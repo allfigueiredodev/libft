@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 18:44:54 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/24 21:37:19 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:51:42 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd(((nmbr % 10) + '0'), fd);
 }
-
-// int main (void)
-// {
-// 	ft_putnbr_fd(-42, 1);
-// }

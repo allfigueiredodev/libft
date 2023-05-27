@@ -6,13 +6,13 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 19:32:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/24 20:00:37 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 12:34:33 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_del_count(char const *s, char c)
+static size_t	ft_del_count(char const *s, char c)
 {
 	size_t		counter;
 	char const	*ptr;
@@ -33,7 +33,7 @@ size_t	ft_del_count(char const *s, char c)
 	return (counter);
 }
 
-int	ft_btw(char const *s, char c)
+static	int	ft_btw(char const *s, char c)
 {
 	int			counter;
 	char const	*ptr;

@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 18:36:52 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 12:57:18 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:51:38 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-
-// int main(void)
-// {
-// 	ft_putendl_fd("qwertyuiop", 1);
-// 	return(0);
-// }

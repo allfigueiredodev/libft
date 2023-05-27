@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 17:10:32 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 12:24:45 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:50:23 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-
-// int main(void)
-// {
-// 	printf("%d", ft_isdigit('3'));
-// }

@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:22:27 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 12:56:55 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:51:23 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-// int main(void)
-// {
-//     char str[] = "qwertyuiop";
-//     printf("%s", (char *)ft_memset("str", '#', 4));
-// }

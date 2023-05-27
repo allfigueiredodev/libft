@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:56:17 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 12:24:05 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:49:52 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,3 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}	
 }
-
-// int main(void)
-// {	
-// 	char str[] = "qwertyuiop";
-// 	ft_bzero(str, 4);
-// 	printf("%s\n", str);
-// }

@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 18:10:27 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/16 12:56:38 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:51:31 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-// int main (void)
-// {
-// 	ft_putchar_fd('a', 1);	
-// }

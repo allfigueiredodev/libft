@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:03:17 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/17 21:33:30 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/26 18:12:20 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	while (n--)
+	while (n)
 	{
 		{
 			if ((*(unsigned char *)s1) == (*(unsigned char *)s2))
@@ -24,9 +24,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			}
 			else
 			{
-				return ((*(int *)s1) - (*(int *)s2));
+				return ((*(unsigned char *)s1) - (*(unsigned char *)s2));
 			}
 		}
+		n--;
 	}
 	return (0);
 }

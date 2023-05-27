@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 13:58:17 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/17 22:28:36 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/05/26 21:37:36 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		while (*s != '\0')
 		{
-			if (*s == c)
+			if (*s == (unsigned char)c)
 			{
 				ptr = (char *)s;
 			}
