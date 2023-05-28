@@ -29,10 +29,6 @@ clean:
 	rm -f $(OBJS)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) ./a.out
 
 re: fclean all
-
-so:
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
-	gcc -nostartfiles -shared -o libft.so $(OBJS)
