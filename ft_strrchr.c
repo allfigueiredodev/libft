@@ -17,8 +17,6 @@ char	*ft_strrchr(const char *s, int c)
 	char	*ptr;
 
 	ptr = NULL;
-	if (!ft_isascii(c))
-		return ((char *)s);
 	if (c == '\0')
 	{
 		while (*s != '\0')

@@ -11,10 +11,12 @@ ft_bzero.c ft_isalnum.c ft_isdigit.c ft_isprint.c ft_itoa.c \
 ft_memmove.c ft_memchr.c ft_memcpy.c ft_memset.c ft_putendl_fd.c \
 ft_putstr_fd.c ft_isalpha.c ft_strrchr.c ft_tolower.c ft_toupper.c \
 
+
 OBJS = $(SRC:.c=.o)
 
 .c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o) -I ./include
+	$(CC) $(FLAGS) -c $< -o $(<:.c=.o) -I ./libft.h
+
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
@@ -31,6 +33,6 @@ fclean: clean
 
 re: fclean all
 
-# so:
-# 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
-# 	gcc -nostartfiles -shared -o libft.so $(OBJS)
+so:
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
