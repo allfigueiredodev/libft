@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 16:13:23 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/26 19:44:28 by aperis-p         ###   ########.fr       */
+/*   Created: 2023/09/23 22:58:43 by aperis-p          #+#    #+#             */
+/*   Updated: 2023/09/24 00:02:23 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	total;
-	size_t	dest_size;
-	size_t	i;
+// void doubleitup(void *content)
+// {
+// 	if(!content)
+// 		return ;
+// 	int *temp = (int *)content;
+// 	*temp = *temp * 2;
+// }
 
-	total = (ft_strlen(dst)) + (ft_strlen(src));
-	dest_size = ft_strlen(dst) + 1;
-	i = 0;
-	if (!dst && !src)
-		return (0);
-	if (ft_strlen(dst) >= size)
-		return (size + ft_strlen(src));
-	while (src[i] && (dest_size + i) < size)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		dst[dest_size - 1 + i] = src[i];
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	dst[dest_size - 1 + i] = '\0';
-	return (total);
 }

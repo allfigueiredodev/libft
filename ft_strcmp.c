@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 17:33:48 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/09/24 00:11:29 by aperis-p         ###   ########.fr       */
+/*   Created: 2023/08/24 15:42:56 by aperis-p          #+#    #+#             */
+/*   Updated: 2023/08/24 15:43:03 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned char	*ptr;
-	unsigned int	i;
-
-	i = 0;
-	ptr = NULL;
-	if (!nmemb || !size)
-		return (malloc(0));
-	if (((nmemb * size) / size) != nmemb)
-		return (ptr);
-	ptr = malloc(nmemb * size);
-	if (!ptr)
-		return (ptr);
-	while (i < (nmemb * size))
+	while ((*s1 != '\0' || *s2 != '\0'))
 	{
-		ptr[i] = 0;
-		i++;
+		while (*s1 == *s2 && *s1 && *s2)
+		{
+			s1++;
+			s2++;
+		}
+		return (*(unsigned char *)s1 - *(unsigned char *)s2);
 	}
-	return ((void *)ptr);
+	return (0);
 }

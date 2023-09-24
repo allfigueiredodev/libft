@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:42:16 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/06/08 13:25:51 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/09/23 23:11:30 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,19 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include <fcntl.h>
+# include <stdio.h>
+# include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 12
+# endif
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}				t_list;
 
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -52,4 +65,26 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+char	*get_next_line(int fd);
+char	*gnl_strjoin(char *s1, char *s2);
+size_t	gnl_strlen(const char *s);
+char	*gnl_strchr(const char *s, char c);
+size_t	gnl_strlcpy(char *dst, const char *src, size_t size);
+int		ftprintf_itoa(unsigned long n, int base, int caps);
+int		ftprintf_putstr(char *str);
+int		ftprintf_putchar(char c);
+int		hash_printer(unsigned long n, int base);
+int		ft_printf(const char *info, ...);
+int		ft_strcmp(const char *s1, const char *s2);
+void	ft_print_matrix(char **matrix);
+void	ft_lstadd_back(t_list **alst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
+
 #endif

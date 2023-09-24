@@ -1,35 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 16:13:23 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/26 19:44:28 by aperis-p         ###   ########.fr       */
+/*   Created: 2023/09/23 22:59:17 by aperis-p          #+#    #+#             */
+/*   Updated: 2023/09/23 22:59:40 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	total;
-	size_t	dest_size;
-	size_t	i;
-
-	total = (ft_strlen(dst)) + (ft_strlen(src));
-	dest_size = ft_strlen(dst) + 1;
-	i = 0;
-	if (!dst && !src)
-		return (0);
-	if (ft_strlen(dst) >= size)
-		return (size + ft_strlen(src));
-	while (src[i] && (dest_size + i) < size)
-	{
-		dst[dest_size - 1 + i] = src[i];
-		i++;
-	}
-	dst[dest_size - 1 + i] = '\0';
-	return (total);
+	if (!lst)
+		return (NULL);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

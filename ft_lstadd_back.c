@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/05 16:13:23 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/05/26 19:44:28 by aperis-p         ###   ########.fr       */
+/*   Created: 2023/09/23 22:55:06 by aperis-p          #+#    #+#             */
+/*   Updated: 2023/09/23 22:55:32 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	size_t	total;
-	size_t	dest_size;
-	size_t	i;
+	t_list	*tmp;
 
-	total = (ft_strlen(dst)) + (ft_strlen(src));
-	dest_size = ft_strlen(dst) + 1;
-	i = 0;
-	if (!dst && !src)
-		return (0);
-	if (ft_strlen(dst) >= size)
-		return (size + ft_strlen(src));
-	while (src[i] && (dest_size + i) < size)
+	if (alst)
 	{
-		dst[dest_size - 1 + i] = src[i];
-		i++;
+		if (*alst == NULL)
+			*alst = new;
+		else
+		{
+			tmp = ft_lstlast(*(alst));
+			tmp->next = new;
+		}
 	}
-	dst[dest_size - 1 + i] = '\0';
-	return (total);
 }
