@@ -6,7 +6,11 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 13:42:16 by aperis-p          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/10/14 22:22:24 by aperis-p         ###   ########.fr       */
+=======
+/*   Updated: 2023/09/29 15:41:24 by aperis-p         ###   ########.fr       */
+>>>>>>> e8a191d93641769fe3e43dd671ad7bb1aab8e74f
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +56,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char	*big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
+long	ft_atol(const char *str);
 char	*ft_strdup(const char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
