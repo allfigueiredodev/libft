@@ -10,7 +10,9 @@ ft_bzero.c ft_isalnum.c ft_isdigit.c ft_isprint.c ft_itoa.c \
 ft_memmove.c ft_memchr.c ft_memcpy.c ft_memset.c ft_putendl_fd.c \
 ft_putstr_fd.c ft_isalpha.c ft_strrchr.c ft_tolower.c ft_toupper.c \
 get_next_line.c get_next_line_utils.c ft_printf_utils.c ft_printf.c \
-ft_strcmp.c ft_print_matrix.c ft_atol.c ft_abs.c ft_abs.c
+ft_strcmp.c ft_print_matrix.c ft_atol.c ft_abs.c ft_abs.c ft_close_all_fds.c \
+ft_close_unused_fds.c ft_dc_lstclear.c ft_lst_new_node.c ft_lst_add_head.c \
+ft_lst_prev_next.c ft_dc_lst_last.c ft_dc_lstsize.c ft_print_dc_list.c
 SRC_BONUS =  ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
 ft_lstdelone.c ft_lstiter.c ft_lstlast.c ft_lstmap.c \
 ft_lstnew.c ft_lstsize.c
