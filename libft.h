@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:01:18 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/10/19 21:46:50 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:52:24 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,6 @@ void				ft_lst_prev_next(t_dclist **alst, t_dclist *new);
 t_dclist			*ft_dc_lst_last(t_dclist *lst);
 int					ft_dc_lstsize(t_dclist *lst);
 void				ft_print_dc_list(t_dclist *stack);
+int					ft_isspace(char c);
 
 #endif
