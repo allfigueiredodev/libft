@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: brunrodr <brunrodr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:01:18 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/10/30 16:52:24 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/11/10 18:30:01 by brunrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,10 @@ char				**ft_split(char const *s, char c);
 char				*ft_itoa(int n);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
-void				ft_putchar_fd(char c, int fd);
+int					ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(char *s, int fd);
-void				ft_putnbr_fd(int n, int fd);
-void				ft_putstr_fd(char *s, int fd);
+int					ft_putnbr_fd(int n, int fd);
+int					ft_putstr_fd(char *s, int fd);
 char				*get_next_line(int fd);
 char				*gnl_strjoin(char *s1, char *s2);
 size_t				gnl_strlen(const char *s);
@@ -114,5 +114,7 @@ t_dclist			*ft_dc_lst_last(t_dclist *lst);
 int					ft_dc_lstsize(t_dclist *lst);
 void				ft_print_dc_list(t_dclist *stack);
 int					ft_isspace(char c);
+int					ft_fprintf(int fd, const char *format, ...);
+
 
 #endif
