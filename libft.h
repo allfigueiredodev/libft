@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunrodr <brunrodr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:01:18 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/11/10 18:30:01 by brunrodr         ###   ########.fr       */
+/*   Updated: 2023/11/14 20:58:43 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,8 @@ int					ft_dc_lstsize(t_dclist *lst);
 void				ft_print_dc_list(t_dclist *stack);
 int					ft_isspace(char c);
 int					ft_fprintf(int fd, const char *format, ...);
+void				ft_safe_free(void **ptr);
+void				ft_free_split(char **split);
 
 
 #endif

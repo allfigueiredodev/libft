@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_safe_free.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/02 17:31:45 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/11/01 22:06:55 by aperis-p         ###   ########.fr       */
+/*   Created: 2023/11/14 20:55:26 by aperis-p          #+#    #+#             */
+/*   Updated: 2023/11/14 21:00:29 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	ft_safe_free(void **ptr)
 {
-	if (!n)
-		return (0);
-	while ((*s1 != '\0' || *s2 != '\0'))
+	if (*ptr != NULL)
 	{
-		while (*s1 == *s2 && --n != 0 && *s1 && *s2)
-		{
-			s1++;
-			s2++;
-		}
-		return (*(unsigned char *)s1 - *(unsigned char *)s2);
+		free(*ptr);
+		*ptr = NULL;
 	}
-	return (0);
 }
