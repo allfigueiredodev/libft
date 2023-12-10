@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_fprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunrodr <brunrodr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 18:04:35 by brunrodr          #+#    #+#             */
-/*   Updated: 2023/11/10 18:47:10 by brunrodr         ###   ########.fr       */
+/*   Updated: 2023/12/09 22:36:59 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_fprintf(int fd, const char *format, ...)
 {
 	va_list	args;
-	size_t length;
-	
+	size_t	length;
+
 	length = 0;
 	va_start(args, format);
 	while (*format)

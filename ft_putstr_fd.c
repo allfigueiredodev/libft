@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brunrodr <brunrodr@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 18:24:14 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/11/10 18:28:04 by brunrodr         ###   ########.fr       */
+/*   Updated: 2023/12/09 22:37:35 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_putstr_fd(char *s, int fd)
 {
-	size_t len;
-	
+	size_t	len;
+
 	len = 0;
 	while (*s)
 	{

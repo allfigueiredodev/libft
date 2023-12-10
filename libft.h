@@ -6,7 +6,7 @@
 /*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 17:01:18 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/11/14 20:58:43 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/12/09 22:31:57 by aperis-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,6 +117,6 @@ int					ft_isspace(char c);
 int					ft_fprintf(int fd, const char *format, ...);
 void				ft_safe_free(void **ptr);
 void				ft_free_split(char **split);
-
+size_t				ft_strcspn(const char *str, char *delim1);
 
 #endif
