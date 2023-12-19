@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aperis-p <aperis-p@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: allesson <allesson@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 15:42:56 by aperis-p          #+#    #+#             */
-/*   Updated: 2023/08/24 15:43:03 by aperis-p         ###   ########.fr       */
+/*   Updated: 2023/12/18 21:46:51 by allesson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
+	if(!s1)
+		return(-1);
 	while ((*s1 != '\0' || *s2 != '\0'))
 	{
 		while (*s1 == *s2 && *s1 && *s2)
